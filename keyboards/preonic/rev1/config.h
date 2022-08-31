@@ -21,3 +21,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define DEVICE_VER      0x0001
 #define PRODUCT_ID      0x67F3
+#define STARTUP_SONG SONG(PREONIC_SOUND)
+
