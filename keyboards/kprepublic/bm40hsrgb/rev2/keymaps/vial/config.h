@@ -134,7 +134,13 @@
 #    define DRIVER_ADDR_1 0b1010000
 #    define DRIVER_COUNT 2
 #    define DRIVER_1_LED_TOTAL 47
-#    define DRIVER_LED_TOTAL DRIVER_1_LED_TOTAL
+
+#    ifdef RGBLIGHT_ENABLE
+#        define WS2812_LED_TOTAL 0
+#    else
+#        define WS2812_LED_TOTAL 6
+#    endif
+#    define DRIVER_LED_TOTAL (DRIVER_1_LED_TOTAL + WS2812_LED_TOTAL)
 
 #if defined(RGB_MATRIX_ENABLE) && defined(RGBLIGHT_ENABLE)
     #define RGB_MATRIX_DISABLE_KEYCODES
