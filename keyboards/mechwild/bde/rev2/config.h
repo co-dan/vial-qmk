@@ -17,4 +17,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+/* Encoder pins */
+#define ENCODERS_PAD_A { D3 }
+#define ENCODERS_PAD_B { D2 }
+
+/* Encoder resolution */
+#define ENCODER_RESOLUTION 4
+
 #define OLED_FONT_H "keyboards/mechwild/bde/lib/rev2.c"
