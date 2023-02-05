@@ -1,0 +1,4 @@
+AUTO_SHIFT_ENABLE = yes
+WPM_ENABLE      = no
+LTO_ENABLE      = yes
+RGB_ENABLE = no
