@@ -30,7 +30,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_GESC,   KC_Q,       KC_W,       KC_E,       KC_R, KC_T,          KC_Y,        KC_U,       KC_I,       KC_O,    KC_P,  KC_BSPC,
       KC_MTCT,   KC_A, MT_G(KC_S), MT_S(KC_D), MT_C(KC_F), KC_G,          KC_H,  MT_C(KC_J), MT_S(KC_K), MT_G(KC_L), KC_SCLN, KC_ENTER,
                  KC_Z,       KC_X,       KC_C,       KC_V, KC_B,          KC_N,        KC_M,    KC_COMM,     KC_DOT, KC_SLSH,
-                         KC_LGUI, LT(_LOWER,KC_BSPC), KC_BSPC, KC_MUTE, KC_SPC, LT(_RAISE,KC_SPC),  MT(KC_RALT,KC_ENTER)
+                     KC_LGUI, LT(_LOWER,KC_BSPC), MT_S(KC_BSPC), KC_MUTE, MT_S(KC_SPC), LT(_RAISE,KC_SPC),  MT(KC_RALT,KC_ENTER)
 ),
 
 [_RAISE] = LAYOUT_splaytoraid40(
@@ -94,26 +94,26 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
 // Liatris specific stuff
 
 void keyboard_post_init_user(void) {
-    // Initialize RGB to static black
-    rgblight_enable_noeeprom();
-    rgblight_sethsv_noeeprom(HSV_BLACK);
-    rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT);
+  // Initialize RGB to static black
+  rgblight_enable_noeeprom();
+  rgblight_sethsv_noeeprom(HSV_BLACK);
+  rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT);
 }
 
 void housekeeping_task_user(void) {
-    switch (get_highest_layer(layer_state | default_layer_state)) {
-        case 0:
-            // Default layer
-            rgblight_setrgb_at(RGB_WHITE, 0);
-            break;
-        case 1:
-            rgblight_setrgb_at(RGB_BLUE, 0);
-            break;
-        case 2:
-            rgblight_setrgb_at(RGB_GREEN, 0);
-            break;
-        case 3:
-            rgblight_setrgb_at(RGB_RED, 0);
-            break;
-    }
+  switch (get_highest_layer(layer_state | default_layer_state)) {
+  case 0:
+    // Default layer
+    rgblight_setrgb_at(200,10,10, 0);
+    break;
+  case 1:
+    rgblight_setrgb_at(10,10,200, 0);
+    break;
+  case 2:
+    rgblight_setrgb_at(10,200,10, 0);
+    break;
+  case 3:
+    rgblight_setrgb_at(RGB_WHITE, 0);
+    break;
+  }
 }
