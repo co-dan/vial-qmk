@@ -10,6 +10,7 @@
 
 #define COMBO_COUNT 1
 
+// liatris stuff
 /* #undef RGB_DI_PIN */
 /* #define RGB_DI_PIN 25 */
 /* #undef RGBLED_NUM */
