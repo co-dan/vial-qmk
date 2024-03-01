@@ -1,0 +1,10 @@
+VIA_ENABLE = yes
+VIAL_ENABLE = yes
+VIAL_INSECURE = yes
+
+AUTO_SHIFT_ENABLE = yes
+WPM_ENABLE      = no
+
+
+# CAPS_WORD_ENABLE = yes
+# COMBO_ENABLE = yes
